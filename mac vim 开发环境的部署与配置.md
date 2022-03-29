@@ -2,6 +2,41 @@
 
 
 
+## Vim 插件简介
+
+|             插件名              |                             描述                             |
+| :-----------------------------: | :----------------------------------------------------------: |
+|        pope/vim-fugitive        | Vim 编辑器中的 Git 包装器插件，它可以让我们在 Vim 编辑器中完成 Git 操作 |
+|       scrooloose/nerdtree       |                 用来提供一个导航目录的侧边栏                 |
+|     ryanoasis/vim-devicons      |                在 NERDTree 中显示文件类型图标                |
+|     jistr/vim-nerdtree-tabs     |              可以使 NERDTree 的 tab 更加友好些               |
+|   Xuyuanp/nerdtree-git-plugin   |              可以在文件目录中看到 git 版本信息               |
+|     airblade/vim-gitgutter      |                  可以在文档中显示 Git 信息                   |
+|        preservim/tagbar         | 查看当前代码文件中的变量和函数列表的插件，可以切换和跳转到代码中对应的变量和函数的位置 |
+|      jiangmiao/auto-pairs       |      自动补全括号的插件，包括小括号，中括号，以及花括号      |
+|     vim-airline/vim-airline     | Vim 状态栏插件，包括显示行号，列号，文件类型，文件名，以及 Git 状态 |
+| vim-airline/vim-airline-themes  |                    vim-airline 的主题插件                    |
+|   ianva/vim-youdao-translater   |                       有道词典在线翻译                       |
+|     ycm-core/YouCompleteMe      |       代码自动完成，安装完插件还需要额外配置才可以使用       |
+|       Yggdroot/indentLine       |                         代码缩进提示                         |
+|      tmhedberg/SimpylFold       |                           代码折叠                           |
+|        SirVer/ultisnips         |                         代码块生成器                         |
+|       honza/vim-snippets        |                     代码块自定义风格片段                     |
+| iamcco/mathjax-support-for-mkdp |                 Markdown 插件，预览数学插件                  |
+|   iamcco/markdown-preview.vim   |                  在浏览器预览 Markdown 文档                  |
+| bronson/vim-trailing-whitespace |                  高亮显示多余空格并一键去除                  |
+|     preservim/nerdcommenter     |                         快速注释插件                         |
+|        Yggdroot/LeaderF         | LeaderF 无论是从性能还是匹配精度上，都远远超越 ctrlp。快速打开或定位某个 buffer、最近使用的文件（mru）、tags（包括函数、类、变量等）、命令历史、文件中的某一行、Vim 的 help、marks 等。 |
+|         morhetz/gruvbox         |                           Vim 主题                           |
+|          fatih/vim-go           |                       Vim Go 语言插件                        |
+|        dgryski/vim-godef        |           go 中的代码追踪，输入 gd 就可以自动跳转            |
+|  vim-scripts/indentpython.vim   |                     Python 缩进优化插件                      |
+|       tell-k/vim-autopep8       |                     Python 编程风格插件                      |
+
+
+
+## MacVim 安装
+
 [Vim下载地址](https://www.vim.org/download.php)，分为适用 Mac 的 [MacVim](https://github.com/macvim-dev/macvim/releases)，适用 MS-Windows 系统的 [GVim](https://www.vim.org/download.php#pc)，适用 Unix 的 [Vim](https://www.vim.org/git.php)。
 
 ```shell
@@ -14,6 +49,8 @@ vim ~/.bash_profile
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias mvim="/Applications/MacVim.app/Contents/Ma cOS/MacVim"
 ```
+
+## 
 
 ## Vim 插件安装
 
@@ -38,7 +75,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 - 从本地Git仓库的插件安装，格式为`Plugin 'file:///home/gmarik/path/to/plugin'`,
 
-  如`Plugin '/Users/biaowong/.vim/plugins/go_fmt_customer'
+  如`Plugin '/Users/biaowong/.vim/plugins/go_fmt_customer`
 
 - 如果插件名称重复，可以通过定义别名的方式避免冲突，如L9插件冲突，可以通过
 
@@ -55,57 +92,73 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " 插件列表
-" vim编辑器中的Git包装器插件，它可以让我们在vim编辑器中完成git操作
+" Vim 编辑器中的 Git 包装器插件，它可以让我们在 Vim 编辑器中完成 Git 操作
 Plugin 'tpope/vim-fugitive'
 " 用来提供一个导航目录的侧边栏
 Plugin 'scrooloose/nerdtree'
-" 可以使 nerdtree 的 tab 更加友好些
+" 在 NERDTree 中显示文件类型图标
+Plugin 'ryanoasis/vim-devicons'
+" 可以使 NERDTree 的 tab 更加友好些
 Plugin 'jistr/vim-nerdtree-tabs'
-" 可以在导航目录中看到 git 版本信息
+" 可以在文件目录中看到 git 版本信息
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-" 可以在文档中显示 git 信息
+" 可以在文档中显示 Git 信息
 Plugin 'airblade/vim-gitgutter'
 " 查看当前代码文件中的变量和函数列表的插件，
 " 可以切换和跳转到代码中对应的变量和函数的位置
 " 大纲式导航, Go 需要 https://github.com/jstemmer/gotags 支持
-Plugin 'majutsushi/tagbar'
+Plugin 'preservim/tagbar'
 " 自动补全括号的插件，包括小括号，中括号，以及花括号
 Plugin 'jiangmiao/auto-pairs'
-" Vim状态栏插件，包括显示行号，列号，文件类型，文件名，以及Git状态
+" Vim 状态栏插件，包括显示行号，列号，文件类型，文件名，以及 Git 状态
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " 有道词典在线翻译
 Plugin 'ianva/vim-youdao-translater'
 " 代码自动完成，安装完插件还需要额外配置才可以使用
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
+" 代码缩进提示
+Plugin 'Yggdroot/indentLine'
+" 代码折叠
+Plugin 'tmhedberg/SimpylFold'
 " 下面两个插件要配合使用，可以自动生成代码块
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-" Markdown 插件
+" Markdown 插件，预览数学插件
 Plugin 'iamcco/mathjax-support-for-mkdp'
+" 在浏览器预览 Markdown 文档
 Plugin 'iamcco/markdown-preview.vim'
 " 高亮显示多余空格并一键去除
 Plugin 'bronson/vim-trailing-whitespace'
-" 状态栏插件，需要安装powerline字体
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
+" 状态栏插件，需要安装 powerline 字体
+"Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 " 快速注释插件
 " let g:NERDSpaceDelims=1 " 注释的时候自动加个空格
 Plugin 'preservim/nerdcommenter'
+" Ctrl + p，实现模糊匹配快速打开文件等功能
+" Plugin 'kien/ctrlp.vim'
+" 这个插件其实是上边 ctrlp 插件的一个补充，它主要是提升了文件查找的速度
+" Plugin 'FelikZ/ctrlp-py-matcher'
+" LeaderF 无论是从性能还是匹配精度上，都远远超越 ctrlp，
+" 快速打开或定位某个 buffer、最近使用的文件（mru）、tags（包括函数、类、变量等）、
+" 命令历史、文件中的某一行、Vim 的 help、marks 等
+Plugin 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
+" Themes
+Plugin 'morhetz/gruvbox'
 
 " Go 相关
-" Go 主要插件
+" go 主要插件
 Plugin 'fatih/vim-go', { 'tag': '*' }
-" Go 中的代码追踪，输入 gd 就可以自动跳转
+" go 中的代码追踪，输入 gd 就可以自动跳转
 Plugin 'dgryski/vim-godef'
 
 " Python 相关
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'tell-k/vim-autopep8'
 
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " 启用自动补全
 
 ```
 
@@ -123,9 +176,17 @@ filetype plugin indent on    " 启用自动补全
 " 建议配置完成后将这个关闭
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
+
 " =============== YCM 配置 ===============
-set nocompatible								" 关闭兼容模式 YCM需求
+set nocompatible				" 关闭兼容模式 YCM 需求
 filetype off                  	" 关闭文件类型侦测 YCM需求
+filetype plugin indent on       " 启用自动补全 YCM需求
+
+" =============== 主题 ===============
+set background=dark    			" Setting dark mode
+let g:gruvbox_italic=1 			" gruvbox 前置配置
+colorscheme gruvbox
+
 
 " =============== 外观设置 ===============
 set number                      " 显示行号
@@ -136,24 +197,26 @@ set guioptions-=b               " 隐藏底部滚动条
 set cursorline                  " 突出显示当前行
 set cursorcolumn                " 突出显示当前列
 set langmenu=zh_CN.UTF-8        " 显示中文菜单
-set helplang=cn 								" 帮助文档中文显示
-set transparency=10							" 设置窗口透明度
+set helplang=cn 				" 帮助文档中文显示
+set transparency=10				" 设置窗口透明度
+
 
 " =============== 编码风格设置 ===============
-syntax enable										" 开启文件类型检测
-set encoding=utf-8							" 编码格式为UTF-8
-set nu 													" 设置行号
+syntax enable					" 开启文件类型检测
+syntax on
+set encoding=utf-8				" 编码格式为UTF-8
+set nu 							" 设置行号
 set nowrap                      " 设置代码不折行"
-set cursorline 									" 突出显示当前行
-" set cursorcolumn 	  					" 突出显示当前列
-set showmatch 									" 显示括号匹配
-set tabstop=4 									" 设置Tab长度为4空格
-set shiftwidth=4 								" 设置自动缩进长度为4空格
+set cursorline 					" 突出显示当前行
+" set cursorcolumn				  " 突出显示当前列
+set showmatch 					" 显示括号匹配
+set tabstop=4 					" 设置Tab长度为4空格
+set shiftwidth=4 				" 设置自动缩进长度为4空格
 set backspace+=indent,eol,start " set backspace&可以对其重置
-set autoindent 									" 继承前一行的缩进方式，适用于多行注释
+set autoindent 					" 继承前一行的缩进方式，适用于多行注释
 set scrolloff=5                 " 距离顶部和底部5行
 set laststatus=2                " 命令行为两行
-let mapleader=";" 							" 定义快捷键的前缀，即<Leader>
+let mapleader=";" 				" 定义快捷键的前缀，即<Leader>
 
 
 " =============== 其它相关设置 ===============
@@ -162,12 +225,11 @@ set selection=exclusive
 set selectmode=mouse,key
 set matchtime=5
 set ignorecase                  " 搜索时大小写不敏感
-set incsearch										" 开启实时搜索
+set incsearch					" 开启实时搜索
 set hlsearch                    " 高亮搜索项
 set noexpandtab                 " 不允许扩展table
 set whichwrap+=<,>,h,l
 set autoread
-filetype plugin indent on    		" 启用自动补全 YCM需求
 " 退出插入模式指定类型的文件自动保存
 "autocmd InsertLeave *.go,*.rs,*.sh,*.php,*.py,*.js,*.html,*.md write
 
@@ -204,17 +266,17 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " 插件列表
-" vim编辑器中的Git包装器插件，它可以让我们在vim编辑器中完成git操作
+" Vim 编辑器中的 Git 包装器插件，它可以让我们在 Vim 编辑器中完成 Git 操作
 Plugin 'tpope/vim-fugitive'
 " 用来提供一个导航目录的侧边栏
 Plugin 'scrooloose/nerdtree'
-" 在NERDTree中显示图片
+" 在 NERDTree 中显示文件类型图标
 Plugin 'ryanoasis/vim-devicons'
-" 可以使 nerdtree 的 tab 更加友好些
+" 可以使 NERDTree 的 tab 更加友好些
 Plugin 'jistr/vim-nerdtree-tabs'
 " 可以在文件目录中看到 git 版本信息
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-" 可以在文档中显示 git 信息
+" 可以在文档中显示 Git 信息
 Plugin 'airblade/vim-gitgutter'
 " 查看当前代码文件中的变量和函数列表的插件，
 " 可以切换和跳转到代码中对应的变量和函数的位置
@@ -222,7 +284,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'preservim/tagbar'
 " 自动补全括号的插件，包括小括号，中括号，以及花括号
 Plugin 'jiangmiao/auto-pairs'
-" Vim状态栏插件，包括显示行号，列号，文件类型，文件名，以及Git状态
+" Vim 状态栏插件，包括显示行号，列号，文件类型，文件名，以及 Git 状态
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " 有道词典在线翻译
@@ -242,19 +304,22 @@ Plugin 'iamcco/mathjax-support-for-mkdp'
 Plugin 'iamcco/markdown-preview.vim'
 " 高亮显示多余空格并一键去除
 Plugin 'bronson/vim-trailing-whitespace'
-" 状态栏插件，需要安装powerline字体
+" 状态栏插件，需要安装 powerline 字体
 "Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 " 快速注释插件
 " let g:NERDSpaceDelims=1 " 注释的时候自动加个空格
 Plugin 'preservim/nerdcommenter'
 " Ctrl + p，实现模糊匹配快速打开文件等功能
 " Plugin 'kien/ctrlp.vim'
-" 无论是从性能还是匹配精度上，都远远超越ctrlp，
-" 快速打开或定位某个buffer、最近使用的文件（mru）、tags（包括函数、类、变量等）、
-" 命令历史、文件中的某一行、vim的help、marks等
+" 这个插件其实是上边 ctrlp 插件的一个补充，它主要是提升了文件查找的速度
+" Plugin 'FelikZ/ctrlp-py-matcher'
+" LeaderF 无论是从性能还是匹配精度上，都远远超越 ctrlp，
+" 快速打开或定位某个 buffer、最近使用的文件（mru）、tags（包括函数、类、变量等）、
+" 命令历史、文件中的某一行、Vim 的 help、marks 等
 Plugin 'Yggdroot/LeaderF', { 'do': './install.sh' }
-" 这个插件其实是上边ctrlp插件的一个补充，它主要是提升了文件查找的速度
-Plugin 'FelikZ/ctrlp-py-matcher'
+
+" Themes
+Plugin 'morhetz/gruvbox'
 
 " Go 相关
 " go 主要插件
@@ -266,10 +331,8 @@ Plugin 'dgryski/vim-godef'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'tell-k/vim-autopep8'
 
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " 启用自动补全
 
 
 " =============== NERDTree 配置 ===============
@@ -313,15 +376,18 @@ let g:webdevicons_conceal_nerdtree_brackets = 1
 let g:webdevicons_enable_airline_tabline = 1
 "adding to vim-airline's statusline
 let g:webdevicons_enable_airline_statusline = 1
+" 解决 GUI 乱码问题
+" 下载地址：https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+set guifont=DroidSansMono_Nerd_Font:h11
 
 
 " =============== vim-nerdtree-tabs 配置 ===============
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
-s
+
 " =============== nerdtree-git-plugin 配置 ===============
-" 开发的过程中，我们希望git信息直接在NERDTree中显示出来， 
-" 和Eclipse一样，修改的文件和增加的文件都给出相应的标注， 
+" 开发的过程中，我们希望git信息直接在NERDTree中显示出来，
+" 和Eclipse一样，修改的文件和增加的文件都给出相应的标注，
 " 这时需要安装的插件就是 nerdtree-git-plugin,配置信息如下
 let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
@@ -370,11 +436,11 @@ let g:tagbar_type_go = {
 " =============== vim-airline 配置 ===============
 " 去这里去选主题
 " https://github.com/vim-airline/vim-airline-themes/tree/master/autoload/airline/themes
-let g:airline_theme="luna" 
+let g:airline_theme="luna"
 
 " 这个是安装字体后 必须设置此项
 let g:airline_powerline_fonts = 1
- 
+
 " 打开tabline功能,方便查看Buffer和切换，这个功能比较不错
 " 我还省去了minibufexpl插件，因为我习惯在1个Tab下用多个buffer
 let g:airline#extensions#tabline#enabled = 1
@@ -388,7 +454,7 @@ nnoremap <C-P> :bp<CR>
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#whitespace#symbol = '!'
 
-" 在Gvim中我设置了英文用Hermit， 中文使用 YaHei Mono
+" 在Gvim中我设置了英文用Hermit，中文使用 YaHei Mono
 if has('win32')
     set guifont=Hermit:h13
     set guifontwide=Microsoft_YaHei_Mono:h12
@@ -403,22 +469,23 @@ noremap <leader>yd :<C-u>Yde<CR>
 
 " =============== YouCompleteMe 配置 ===============
 " 补全菜单的开启与关闭
-set completeopt=longest,menu                    " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
-let g:ycm_min_num_of_chars_for_completion=2             " 从第2个键入字符就开始罗列匹配项
-let g:ycm_cache_omnifunc=0                      " 禁止缓存匹配项,每次都重新生成匹配项
+set completeopt=longest,menu                    			" 让 Vim 的补全菜单行为与一般 IDE 一致(参考 VimTip1228)
+let g:ycm_min_num_of_chars_for_completion=2             	" 从第 2 个键入字符就开始罗列匹配项
+let g:ycm_cache_omnifunc=0                      			" 禁止缓存匹配项,每次都重新生成匹配项
 let g:ycm_autoclose_preview_window_after_completion=1       " 智能关闭自动补全窗口
-"autocmd InsertLeave * if pumvisible() == 0|pclose|endif         " 离开插入模式后自动关闭预览窗口
+"autocmd InsertLeave * if pumvisible() == 0|pclose|endif    " 离开插入模式后自动关闭预览窗口
 
 " 补全菜单中各项之间进行切换和选取：默认使用tab  s-tab进行上下切换，使用空格选取。可进行自定义设置：
-"let g:ycm_key_list_select_completion=['<c-n>']
-"let g:ycm_key_list_select_completion = ['<Down>']      " 通过上下键在补全菜单中进行切换
-"let g:ycm_key_list_previous_completion=['<c-p>']
-"let g:ycm_key_list_previous_completion = ['<Up>']
+" 解决与 ultisnips 冲突的快捷键
+"let g:ycm_key_list_select_completion = ['<C-n>', '<space>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
+
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"    " 回车即选中补全菜单中的当前项
 
 " 开启各种补全引擎
 let g:ycm_collect_identifiers_from_tags_files=1             " 开启 YCM 基于标签引擎
-let g:ycm_auto_trigger = 1                                  " 开启 YCM 基于标识符补全，默认为1
+let g:ycm_auto_trigger = 1                                  " 开启 YCM 基于标识符补全，默认为 1
 let g:ycm_seed_identifiers_with_syntax=1                    " 开启 YCM 基于语法关键字补全
 let g:ycm_complete_in_comments = 1                          " 在注释输入中也能补全
 let g:ycm_complete_in_strings = 1                           " 在字符串输入中也能补全
@@ -431,13 +498,13 @@ inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
-"nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>           " force recomile with syntastic
-"nnoremap <leader>lo :lopen<CR>    "open locationlist
-"nnoremap <leader>lc :lclose<CR>    "close locationlist
+"nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>   " force recomile with syntastic
+"nnoremap <leader>lo :lopen<CR>    					" open locationlist
+"nnoremap <leader>lc :lclose<CR>    				" close locationlist
 "inoremap <leader><leader> <C-x><C-o>
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
-let g:ycm_confirm_extra_conf=0  " 关闭加载.ycm_extra_conf.py确认提示
+let g:ycm_confirm_extra_conf=0  									" 关闭加载.ycm_extra_conf.py确认提示
 
 
 " =============== indentline 配置 ===============
@@ -455,6 +522,15 @@ set foldlevel=99
 nnoremap <space> za
 " 希望看到折叠代码的文档字符串？
 let g:SimpylFold_docstring_preview=1
+
+
+" =============== ultisnips 配置 ===============
+g:UltiSnipsExpandTrigger               <tab>
+g:UltiSnipsListSnippets                <c-tab>
+g:UltiSnipsJumpForwardTrigger          <c-n>
+g:UltiSnipsJumpBackwardTrigger         <c-p>
+" 使用 UltiSnipsEdit 命令时垂直分割屏幕
+let g:UltiSnipsEditSplit="vertical"
 
 
 " =============== markdown-preview 配置 ===============
@@ -478,19 +554,118 @@ let g:mkdp_command_for_global = 0
 let g:mkdp_open_to_the_world = 0
 nmap <silent> <F8> <Plug>MarkdownPreview        	" 普通模式
 imap <silent> <F8> <Plug>MarkdownPreview        	" 插入模式
-nmap <silent> <C-F8> <Plug>StopMarkdownPreview    " 普通模式
-imap <silent> <C-F8> <Plug>StopMarkdownPreview    " 插入模式
+nmap <silent> <C-F8> <Plug>StopMarkdownPreview    	" 普通模式
+imap <silent> <C-F8> <Plug>StopMarkdownPreview    	" 插入模式
 
+
+" =============== vim-trailing-whitespace 配置 ===============
+ map <leader><space> :FixWhitespace<cr>
 
 
 " =============== NerdCommenter 配置 ===============
-let g:NERDSpaceDelims=1	" 注释的时候自动加个空格
-nmap <leader>cc   			" 加注释
-nmap <leader>cu   			" 解开注释
+let g:NERDSpaceDelims=1			" 注释的时候自动加个空格
+nmap <leader>cc   				" 加注释
+nmap <leader>cu   				" 解开注释
 nmap <leader>ca 				" 切换注释的样式:/*....*/和//..的切换
-nmap <leader>c<space> 	" 加上/解开注释, 智能判断
-nmap <leader>cy   			" 先复制, 再注解，p可以进行黏贴
+nmap <leader>c<space> 			" 加上/解开注释, 智能判断
+nmap <leader>cy   				" 先复制, 再注解，p可以进行黏贴
 nmap <leader>cs  				" '性感的'注释
+
+
+" =============== LeaderF 配置 ===============
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_PopupPalette = {
+    \  'light': {
+    \      'Lf_hl_match': {
+    \                'gui': 'NONE',
+    \                'font': 'NONE',
+    \                'guifg': 'NONE',
+    \                'guibg': '#303136',
+    \                'cterm': 'NONE',
+    \                'ctermfg': 'NONE',
+    \                'ctermbg': '236'
+    \              },
+    \      'Lf_hl_cursorline': {
+    \                'gui': 'NONE',
+    \                'font': 'NONE',
+    \                'guifg': 'NONE',
+    \                'guibg': '#303136',
+    \                'cterm': 'NONE',
+    \                'ctermfg': 'NONE',
+    \                'ctermbg': '236'
+    \              },
+    \      },
+    \  'dark': {
+    \      }
+    \  }
+" Show icons, icons are shown by default
+let g:Lf_ShowDevIcons = 1
+" For GUI vim, the icon font can be specify like this, for example
+let g:Lf_DevIconsFont = "DroidSansMono Nerd Font Mono"
+" If needs
+set ambiwidth=double
+" don't show the help in normal mode
+let g:Lf_HideHelp = 1
+let g:Lf_UseCache = 0
+let g:Lf_UseVersionControlTool = 0
+let g:Lf_IgnoreCurrentBufferName = 1
+" popup mode
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
+let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
+let g:Lf_ShortcutF = "<leader>ff"
+noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+noremap <C-B> :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR>
+noremap <C-F> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
+" search visually selected text literally
+xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>
+noremap go :<C-U>Leaderf! rg --recall<CR>
+" should use `Leaderf gtags --update` first
+let g:Lf_GtagsAutoGenerate = 0
+let g:Lf_Gtagslabel = 'native-pygments'
+noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
+noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
+noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
+
+
+" =============== Vim-go 配置 ===============
+let s:packages = [
+      \ "github.com/nsf/gocode",
+      \ "github.com/alecthomas/gometalinter",
+      \ "golang.org/x/tools/cmd/goimports",
+      \ "golang.org/x/tools/cmd/guru",
+      \ "golang.org/x/tools/cmd/gorename",
+      \ "github.com/golang/lint/golint",
+      \ "github.com/rogpeppe/godef",
+      \ "github.com/kisielk/errcheck",
+      \ "github.com/jstemmer/gotags",
+      \ "github.com/klauspost/asmfmt/cmd/asmfmt",
+      \ "github.com/fatih/motion",
+      \ "github.com/fatih/gomodifytags",
+      \ "github.com/zmb3/gogetdoc",
+      \ "github.com/josharian/impl",
+      \ "github.com/dominikh/go-tools/cmd/keyify",
+      \ ]
+
+
+" =============== vim-godef 配置 ===============
+let g:godef_split=3 														" 在新标签打开
+let g:godef_same_file_in_same_window=1 										" 函数在同一个文件中时不需要打开新窗口
+autocmd FileType go nnoremap <buffer> gd :call GodefUnderCursor()<cr>
+autocmd FileType go nnoremap <buffer> <C-]> :call GodefUnderCursor()<cr> 	" 使用 C-] 代替 gd 进行跳转
+
+
+" =============== vim-autopep8 配置 ===============
+let g:autopep8_disable_show_diff=1
+autocmd FileType python noremap <buffer> <F4> :call Autopep8()<CR>
+
 ```
 
 
@@ -526,6 +701,50 @@ git submodule update --init --recursive
 ./install.py --all
 ```
 
+配置：
+
+```properties
+" 补全菜单的开启与关闭
+set completeopt=longest,menu                    			" 让 Vim 的补全菜单行为与一般 IDE 一致(参考 VimTip1228)
+let g:ycm_min_num_of_chars_for_completion=2             	" 从第 2 个键入字符就开始罗列匹配项
+let g:ycm_cache_omnifunc=0                      			" 禁止缓存匹配项,每次都重新生成匹配项
+let g:ycm_autoclose_preview_window_after_completion=1       " 智能关闭自动补全窗口
+"autocmd InsertLeave * if pumvisible() == 0|pclose|endif    " 离开插入模式后自动关闭预览窗口
+
+" 补全菜单中各项之间进行切换和选取：默认使用tab  s-tab进行上下切换，使用空格选取。可进行自定义设置：
+" 解决与 ultisnips 冲突的快捷键
+"let g:ycm_key_list_select_completion = ['<C-n>', '<space>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
+
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"    " 回车即选中补全菜单中的当前项
+
+" 开启各种补全引擎
+let g:ycm_collect_identifiers_from_tags_files=1             " 开启 YCM 基于标签引擎
+let g:ycm_auto_trigger = 1                                  " 开启 YCM 基于标识符补全，默认为 1
+let g:ycm_seed_identifiers_with_syntax=1                    " 开启 YCM 基于语法关键字补全
+let g:ycm_complete_in_comments = 1                          " 在注释输入中也能补全
+let g:ycm_complete_in_strings = 1                           " 在字符串输入中也能补全
+let g:ycm_collect_identifiers_from_comments_and_strings = 0 " 注释和字符串中的文字也会被收入补全
+
+" 重映射快捷键
+"上下左右键的行为 会显示其他信息,inoremap由i 插入模式和noremap不重映射组成，只映射一层，不会映射到映射的映射
+inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+
+"nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>   " force recomile with syntastic
+"nnoremap <leader>lo :lopen<CR>    					" open locationlist
+"nnoremap <leader>lc :lclose<CR>    				" close locationlist
+"inoremap <leader><leader> <C-x><C-o>
+
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
+let g:ycm_confirm_extra_conf=0  									" 关闭加载.ycm_extra_conf.py确认提示
+```
+
+
+
 ---
 
 ## 以下内容可忽略不看
@@ -547,7 +766,7 @@ vim-fugitive 可以让我们在 Vim 命令行中运行任何的 Git 相关命令
 
 文件管理插件，可以侧边栏显示或关闭NERDTree，并对NERDTree进行相关操作。
 
-配置文件：
+配置：
 
 ```shell
 "使用F3键快速调出和隐藏它
@@ -579,8 +798,6 @@ let NERDTreeAutoCenter=1
 " 在终端启动vim时，共享NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
 ```
-
-
 
 操作方法：
 
@@ -636,7 +853,7 @@ let g:webdevicons_enable_airline_statusline = 1
 
 共享 NERDTree 状态。在编辑当前文件，切换到 NERDTree，选中其它文件按 t 打开新标签，保留 NERDTree 状态。
 
-配置文件：
+配置：
 
 ```shell
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
@@ -659,6 +876,8 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 #### nerdtree-git-plugin
 
 能够在 NERDTree 文件栏中显示 Git 状态。
+
+配置：
 
 ```shell
 " 开发的过程中，我们希望git信息直接在NERDTree中显示出来， 
@@ -722,6 +941,8 @@ let g:tagbar_type_go = {
 
 在输入或删除左括号时，能自动补上或删除右括号。
 
+配置：
+
 ```properties
 " 去这里去选主题
 " https://github.com/vim-airline/vim-airline-themes/tree/master/autoload/airline/themes
@@ -754,7 +975,7 @@ endif
 
 在普通模式下，按 `,y`， 会翻译当前光标下的单词。
 
-配置文件：
+配置：
 
 ```properties
 vnoremap <silent> <C-T> :<C-u>Ydv<CR>
@@ -775,7 +996,7 @@ noremap <leader>yd :<C-u>Yde<CR>
 
 一款非常强大的代码自动补全插件，用`TAB键`切换选择。
 
-配置文件：
+配置：
 
 ```properties
 " 补全菜单的开启与关闭
@@ -820,6 +1041,8 @@ let g:ycm_confirm_extra_conf=0  " 关闭加载.ycm_extra_conf.py确认提示
 
 代码缩进提示插件。
 
+配置：
+
 ```properties
 " 支持任意ASCII码，也可以使用特殊字符：¦, ┆, or │ ，但只在utf-8编码下有效
 let g:indentLine_char='¦'
@@ -830,6 +1053,8 @@ let g:indentLine_enabled = 1
 #### SimpylFold
 
 代码快速折叠插件。
+
+配置：
 
 ```properties
 " 必须手动输入za来折叠（和取消折叠）
@@ -845,6 +1070,19 @@ let g:SimpylFold_docstring_preview=1
 
 Ultisnips 插件安装分两部分，一个是 ultisnips 插件本身，另外一个是代码片段仓库。一般来说把默认的代码片段仓库下载下来按需修改后上传到自己的 github 即可。
 
+配置：
+
+```properties
+g:UltiSnipsExpandTrigger               <tab>
+g:UltiSnipsListSnippets                <c-tab>
+g:UltiSnipsJumpForwardTrigger          <c-n>
+g:UltiSnipsJumpBackwardTrigger         <c-p>
+" 使用 UltiSnipsEdit 命令时垂直分割屏幕
+let g:UltiSnipsEditSplit="vertical"
+```
+
+
+
 #### vim-snippets
 
 自己的代码片段仓库，按需修改维护。配合 ultisnips 插件才能生效。可以下载 https://github.com/honza/vim-snippets这个 vim-snippets 库，按需修改后上传到自己的 GitHub 中。
@@ -857,7 +1095,7 @@ Markdown 数学公式预览插件。
 
 Markdown 浏览器预览插件。
 
-配置文件：
+配置：
 
 ```properties
 " 设置 chrome 浏览器的路径（或是启动 chrome（或其他现代浏览器）的命令）
@@ -889,13 +1127,150 @@ nmap <silent> <C-F8> <Plug>StopMarkdownPreview    " 普通模式
 imap <silent> <C-F8> <Plug>StopMarkdownPreview    " 插入模式
 ```
 
+#### vim-trailing-whitespace
 
+会将行尾空格标红，并可以一键去掉行尾的空格。
 
+配置：
 
+```properties
+ map <leader><space> :FixWhitespace<cr>
+```
 
+#### nerdcommenter
 
+根据文件类型实现不同风格的快速注释功能。
 
+#### LeaderF
 
+模糊搜索快速打开目录下的文件，模糊搜索当前文件的函数及字符。
 
+配置：
 
+```properties
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_PopupPalette = {
+    \  'light': {
+    \      'Lf_hl_match': {
+    \                'gui': 'NONE',
+    \                'font': 'NONE',
+    \                'guifg': 'NONE',
+    \                'guibg': '#303136',
+    \                'cterm': 'NONE',
+    \                'ctermfg': 'NONE',
+    \                'ctermbg': '236'
+    \              },
+    \      'Lf_hl_cursorline': {
+    \                'gui': 'NONE',
+    \                'font': 'NONE',
+    \                'guifg': 'NONE',
+    \                'guibg': '#303136',
+    \                'cterm': 'NONE',
+    \                'ctermfg': 'NONE',
+    \                'ctermbg': '236'
+    \              },
+    \      },
+    \  'dark': {
+    \      }
+    \  }
+" Show icons, icons are shown by default
+let g:Lf_ShowDevIcons = 1
+" For GUI vim, the icon font can be specify like this, for example
+let g:Lf_DevIconsFont = "DroidSansMono Nerd Font Mono"
+" If needs
+set ambiwidth=double
+" don't show the help in normal mode
+let g:Lf_HideHelp = 1
+let g:Lf_UseCache = 0
+let g:Lf_UseVersionControlTool = 0
+let g:Lf_IgnoreCurrentBufferName = 1
+" popup mode
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
+let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
+
+let g:Lf_ShortcutF = "<leader>ff"
+noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+
+noremap <C-B> :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR>
+noremap <C-F> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
+" search visually selected text literally
+xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>
+noremap go :<C-U>Leaderf! rg --recall<CR>
+
+" should use `Leaderf gtags --update` first
+let g:Lf_GtagsAutoGenerate = 0
+let g:Lf_Gtagslabel = 'native-pygments'
+noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
+noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
+noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
+```
+
+#### vim-go
+
+Vim-go 是当前使用最为广泛的用于搭建 Golang 开发环境的 Vim 插件。
+
+配置：
+
+```properties
+let s:packages = [
+      \ "github.com/nsf/gocode",
+      \ "github.com/alecthomas/gometalinter",
+      \ "golang.org/x/tools/cmd/goimports",
+      \ "golang.org/x/tools/cmd/guru",
+      \ "golang.org/x/tools/cmd/gorename",
+      \ "github.com/golang/lint/golint",
+      \ "github.com/rogpeppe/godef",
+      \ "github.com/kisielk/errcheck",
+      \ "github.com/jstemmer/gotags",
+      \ "github.com/klauspost/asmfmt/cmd/asmfmt",
+      \ "github.com/fatih/motion",
+      \ "github.com/fatih/gomodifytags",
+      \ "github.com/zmb3/gogetdoc",
+      \ "github.com/josharian/impl",
+      \ "github.com/dominikh/go-tools/cmd/keyify",
+      \ ]
+```
+
+#### vim-godef
+
+这个插件为 Vim 增加了godef 支持。Roger 解析 Go 的 godef 工具返回代码并返回符号定义的位置。
+
+配置：
+
+```properties
+let g:godef_split=3 	" 在新标签打开
+let g:godef_same_file_in_same_window=1 	" 函数在同一个文件中时不需要打开新窗口
+autocmd FileType go nnoremap <buffer> gd :call GodefUnderCursor()<cr>
+autocmd FileType go nnoremap <buffer> <C-]> :call GodefUnderCursor()<cr> " 使用 C-] 代替 gd 进行跳转
+```
+
+#### indentpython.vim
+
+Python 代码自动缩进作用，在某些情况下（比如函数定义有多行的时候），并不总是会达到你想要的缩进效果，尤其是在符合 PEP8 标准方面。我们可以利用 indentpython.vim 插件来解决这个问题。
+
+配置：
+
+```properties
+" 标红空白字符，该功能可以使用 vim-trailing-whitespace 插件代替
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+```
+
+#### vim-autopep8
+
+一款自动格式化工具，安装配置 vim-autopep8 插件之后在 vim 的 Normal 模式输入 `:Autopep8` 或按 `F4` 就可以自动依照 pep8 的标准自动格式化代码。
+
+配置：
+
+```properties
+let g:autopep8_disable_show_diff=1
+autocmd FileType python noremap <buffer> <F4> :call Autopep8()<CR>
+```
 
