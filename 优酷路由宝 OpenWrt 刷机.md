@@ -50,5 +50,40 @@ mtd write /tmp/breed-mt7620-youku-yk1.bin mtd1
 
 ![Breed Web 恢复控制后台 完成页面](./assets/images/breed_web_update_done.png)
 
-## 步骤四、科学上网
+## 固件更新完成后，浏览器输入：`192.168.5.1` 用户名：`root` 密码：`password` 点击「登录」即可愉快的玩耍了。
+
+![路由器登录页面](D:\markdowns\assets\images\login.png)
+
+![路由器首页](D:\markdowns\assets\images\home.png)
+
+## 自带插件列表
+
+|         插件名         |              说明              |
+| :--------------------: | :----------------------------: |
+| luci-app-accesscontrol |          访问时间控制          |
+| luci-app-argon-config  |            主题配置            |
+|    luci-app-arpbind    |           IP/MAC绑定           |
+|  luci-app-autoreboot   |          定时计划重启          |
+|     luci-app-ddns      |            动态DNS             |
+|   luci-app-easymesh    |         有线+无线回程          |
+| luci-app-filetransfer  |            文件传输            |
+|   luci-app-firewall    |             防火墙             |
+|    luci-app-nlbwmon    |         网络带宽监视器         |
+|    luci-app-onliner    |           ECU 在线器           |
+|    luci-app-openvpn    |         Open Vpn客户端         |
+|    luci-app-p910nd     |          打印服务模块          |
+|    luci-app-ramfree    |            释放内存            |
+|     luci-app-samba     |            文件共享            |
+|     luci-app-socat     |        多功能的网络工具        |
+|   luci-app-ssr-plus    |       ShadowSocksR Plus+       |
+|     luci-app-ttyd      |        TTYD 终端命令行         |
+|   luci-app-turboacc    |          网络加速模块          |
+| luci-app-unblockmusic  |       解锁网易云灰色歌曲       |
+|     luci-app-upnp      | 通用即插即用UPnP(端口自动转发) |
+|  uci-app-usb-printer   |         USB 打印服务器         |
+|    luci-app-vlmcsd     |         KMS激活服务器          |
+|    luci-app-vsftpd     |           FTP服务器            |
+| luci-app-wifischedule  |           WiFi 计划            |
+|      luci-app-wol      |            网络唤醒            |
+|   luci-app-zerotier    |     Zerotier 虚拟 VPN LAN      |
 
