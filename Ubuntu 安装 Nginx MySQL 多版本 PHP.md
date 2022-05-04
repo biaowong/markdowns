@@ -4,6 +4,7 @@
 
 ```shell
 sudo apt update
+sudo apt upgrade
 ```
 
 ## MySQL 安装
@@ -155,14 +156,11 @@ sudo ./configure \
 --with-mysql-sock=/tmp/mysql.sock \
 --with-pdo-mysql \
 --with-kerberos \
---with-xpm-dir=/usr/lib64 \
 --with-libdir=lib64 \
 --with-openssl \
---with-mcrypt \
 --with-pear \
 --with-gettext \
 --with-jpeg \
---with-png \
 --with-libxml \
 --with-pdo-sqlite \
 --with-mhash \
@@ -191,7 +189,7 @@ sudo ./configure \
 --enable-session \
 --enable-ctype \
 --enable-mysqlnd \
---enable-intl \
+--disable-intl \
 --enable-calendar \
 --enable-static \
 --enable-mysqlnd
@@ -206,7 +204,7 @@ sudo cp /usr/local/php74/etc/php-fpm.conf.default /usr/local/php74/etc/php-fpm.c
 
 # 多版本 php 共存，需要修改监听的端口号 9000 改为 9001
 sudo vim /usr/local/php74/etc/php-fpm.d/www.conf
-listen = 127.0.0.1:9001 
+listen = 127.0.0.1:9001
 
 # 复制启动脚本并给予可执行权
 sudo cp /usr/local/src/php-7.4.29/sapi/fpm/init.d.php-fpm /etc/init.d/php7.4-fpm
@@ -329,7 +327,7 @@ sudo make install
 
 sudo vim /etc/php/php81.ini
 # 在最下方添加 redis 扩展
-extension=redis
+extension=redis.so
 ```
 
 ## 开机启动配置
@@ -395,6 +393,7 @@ ExecStop=/etc/init.d/auto-start stop
 WantedBy=multi-user.target
 Alias=auto-start.service
 
+# 添加可执行权
 sudo chmod +x /etc/systemd/system/auto-start.service
 
 sudo systemctl daemon-reload
