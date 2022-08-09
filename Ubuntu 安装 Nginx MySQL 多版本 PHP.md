@@ -111,8 +111,7 @@ sudo ./configure \
 --enable-mysqlnd \
 --enable-intl \
 --enable-calendar \
---enable-static \
---enable-mysqlnd
+--enable-static
 
 sudo make -j 8 # 数字 8 是 CPU 的核数
 sudo make install
@@ -189,10 +188,9 @@ sudo ./configure \
 --enable-session \
 --enable-ctype \
 --enable-mysqlnd \
---disable-intl \
 --enable-calendar \
 --enable-static \
---enable-mysqlnd
+--disable-intl
 
 sudo make -j 8 # 数字 8 是 CPU 的核数
 sudo make install
@@ -277,8 +275,7 @@ sudo ./configure \
 --enable-mysqlnd \
 --enable-intl \
 --enable-calendar \
---enable-static \
---enable-mysqlnd
+--enable-static
 
 sudo make -j 8 # 数字 8 是 CPU 的核数
 sudo make install
